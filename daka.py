@@ -44,7 +44,7 @@ def dk(username, password, province, city):
     date_color = driver.find_element_by_xpath("//body/form[1]/div[1]/div[9]/span[1]").value_of_css_property('color')
     date_color_hex = Color.from_string(date_color).hex
     print(date_color_hex)
-    if date_color_hex == '#ff00ff':
+    if date_color_hex != '#ff00ff':
         driver.find_element_by_xpath('//*[@id="bak_0"]/div[13]/div[5]/div[4]/span').click()
         driver.implicitly_wait(3)
         time.sleep(1)
