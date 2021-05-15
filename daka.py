@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # @Time    : 2021-02-01 11:33
-# @Author  : shenpc
+# @Author  : 
 # @Site    :
 # @File    : daka.py
 # @Software: PyCharm
@@ -20,7 +20,6 @@ print("开始运行",datetime.datetime.now())
 # 启动谷歌浏览器
 options = Options()
 
-# options.add_argument("--proxy-server=http://221.5.80.66:3128")
 service = Service('C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe')
 service.command_line_args()
 service.start()
@@ -62,8 +61,8 @@ def dk(username, password, province, city):
         print('2', dili.get_attribute("value"))
         driver.find_element_by_xpath('//*[@id="bak_0"]/div[8]/div[2]/div[2]/div[6]/div[4]').click()
 
-username = ['20177720139', '20177720137']
-password = ['3870204752', '6715471475']
+username = ['201xxx', '201xxx']  # 健康打卡账号
+password = ['xxx', 'xxx']        # # 健康打卡密码
 province = ['河南省', '河南省']
 city = ['郑州市', '郑州市']
 
@@ -74,9 +73,3 @@ driver.quit()
 service.stop()
 print("运行结束",datetime.datetime.now())
 print('ok')
-# pkg = pkg_text.get_attribute('href').split('=')[1].replace('&ref', '')
-#
-# appname = pkg_text.text
-# category = driver.find_element_by_xpath('/html/body/div[6]/div/div[1]/div[1]/ul/li[1]/p/a').text
-# datadict = []
-# datadict.append([kws_,appname,pkg,round(edit_distance(kw, appname),4),'',category,'xm'])
