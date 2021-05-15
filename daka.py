@@ -19,15 +19,16 @@ print("开始运行",datetime.datetime.now())
 
 # 启动谷歌浏览器
 options = Options()
-
+# 一些配置，详细可以google
+# options.add_argument('--headless')   # chrome无头模式运行，即无界面
 service = Service('C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe')
 service.command_line_args()
 service.start()
 driver = webdriver.Chrome('C:\Program Files (x86)\Google\Chrome\Application\chromedriver.exe',options=options)
 def dk(username, password, province, city):
     url = 'https://jksb.v.zzu.edu.cn/vls6sss/zzujksb.dll/first0'
-    driver.get(url)
-    driver.implicitly_wait(10)
+    driver.get(url)                   # 跳转到url
+    driver.implicitly_wait(10)        # 隐式等待，防止执行下方代码时页面未加载完成
     time.sleep(1)
 
     driver.find_element_by_xpath('//*[@id="mt_5"]/div[2]/div[3]/input').send_keys(username)
@@ -39,7 +40,7 @@ def dk(username, password, province, city):
     # time.sleep(1)
     print(driver.current_url)
     iframe = driver.find_elements_by_tag_name("iframe")[0]
-    driver.switch_to.frame(iframe)
+    driver.switch_to.frame(iframe)                   # 如有frame需跳转，否则会报错找不到标签元素
     # driver.switch_to.frame('zzj_top_6s')
     date_color = driver.find_element_by_xpath("//body/form[1]/div[1]/div[9]/span[1]").value_of_css_property('color')
     date_color_hex = Color.from_string(date_color).hex
