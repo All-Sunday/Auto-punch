@@ -4,8 +4,7 @@
 仅供学习交流使用，请勿依赖。开发者对使用本脚本造成的问题不负任何责任，不对脚本执行效果做出任何担保，原则上不提供任何形式的技术支持。  
 为防止疫情再次扩散，我们一定要如实汇报自己的个人情况，不隐瞒真实状况。  
 **ps：喜欢请Star此项目**🤞🤞🤞。
-![image](https://user-images.githubusercontent.com/39648485/118446196-ed6bc980-b721-11eb-9126-64cf9bc7fb1d.png)
-
+![image](https://user-images.githubusercontent.com/39648485/118446437-37ed4600-b722-11eb-914a-51635ccc6676.png)
 ## 简明教程
 ### 环境
 python 3.8.5  
